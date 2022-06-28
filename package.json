@@ -1,0 +1,22 @@
+{
+  "name": "obfuscate",
+  "version": "1.0.0",
+  "description": "Simple node webapp which obfuscates text in a given document.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CPerry26/node-obfuscate.git"
+  },
+  "author": "CPerry26",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CPerry26/node-obfuscate/issues"
+  },
+  "homepage": "https://github.com/CPerry26/node-obfuscate#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
