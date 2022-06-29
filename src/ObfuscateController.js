@@ -9,7 +9,7 @@ router.use(bodyParser.json());
 
 // Define APIs here.
 // This API is actually bound to /obfuscate but that's done at the app layer.
-router.get('/', (request, response) => {
+router.post('/', (request, response) => {
     if (request.body)
     {
         try {
@@ -70,14 +70,14 @@ function writeDocumentToFile(content)
     if (content)
     {
         // Ensure the output directory exists, if not create it.
-        let dirName = "./documents";
+        let dirName = "./documents/";
         if (!fileSys.existsSync(dirName))
         {
             fileSys.mkdirSync(dirName);
         }
         
         // Construct a custom filename to avoid overwriting.
-        let fileName = "document-" + Date.now() + ".txt";
+        let fileName = dirName + "document-" + Date.now() + ".txt";
 
         // Write the output file using a callback.
         fileSys.writeFile(fileName, content, err => {
