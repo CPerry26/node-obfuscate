@@ -4,7 +4,7 @@
   "description": "Simple node webapp which obfuscates text in a given document.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/CPerry26/node-obfuscate#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "jest-cli": "^28.1.2"
+  },
+  "devDependencies": {
+    "jest": "^28.1.2"
   }
 }

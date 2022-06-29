@@ -43,8 +43,8 @@ function censorText(jsonBody)
     console.log("Phrases: " + phrases);
     console.log("Text: " + text);
     
-    // Sanitize the phrase string.
-    let sanitizedPhrases = phrases.replace(/[^a-zA-Z "']/g, "");
+    // Sanitize the phrase string. Replace any commas with spaces and then remove erroneous chars.
+    let sanitizedPhrases = phrases.replace(/,/g, " ").replace(/[^a-zA-Z "']/g, "");
     console.log("Sanitized phrases: " + sanitizedPhrases);
     
     // Tokenize the phrase string to words and phrases.
@@ -90,4 +90,4 @@ function writeDocumentToFile(content)
 }
 
 // Export the router to tell the app to use it.
-module.exports = router;
+module.exports = {router, censorText};

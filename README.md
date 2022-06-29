@@ -15,6 +15,11 @@ The following steps assume node is installed locally.
 `
 5. Returned will be the cleaned document text, and a file will be written locally to the documents directory.
 
+*NOTE* If you received an error, you probably need to run `npm install` and then retry steps 3 on.
+
+## How to Test
+To run unit tests, run `npm test` from the top level directory. It will use Jest to execute the tests.
+
 ## Notes
 - To send a phrase with double quotes, you must escape them in the phrase string.
 - You can send strings which have terms separated by both spaces and commas.
